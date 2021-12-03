@@ -8,6 +8,7 @@ struct stack
     int top;
     int  a[max];
 };
+
 typedef struct  stack STACK;
 STACK s;
 
@@ -17,8 +18,7 @@ void push()
     if(s.top==(max-1))
     {
        printf("the stack is full\n");
-    }
-   
+    }   
     else
     {
         s.top+=1;
@@ -38,7 +38,9 @@ void pop()
     printf("the deleted element is %d\n",s.a[s.top]);
     s.top-=1;
   }
+  return;
 }
+
 void  display()
 {
   if(s.top==-1)
@@ -55,6 +57,7 @@ void  display()
       printf("%d ",s.a[i]);
     }
   }
+  return;
 }
 void peek()
 {
@@ -69,7 +72,7 @@ int main()
     int choice;
     s.top=-1;
 
-    printf("\nSTACK IMPLEMENTATION\n");
+    printf("\nSTACK IMPLEMENTATION  USING STRUCTURE\n");
     
        
    do
