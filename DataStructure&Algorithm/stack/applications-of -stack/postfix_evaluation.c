@@ -35,7 +35,7 @@ void EvalPostfix(char postfix[])
                 ch - '0' is used for getting digit rather than ASCII code of digit */
             push(ch - '0');
         }
-        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch =='^')
+        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/')
         {        
             A = pop();
             B = pop();
@@ -56,13 +56,9 @@ void EvalPostfix(char postfix[])
 
               case '-':
                 val = B - A;
-                break;
-                
-              case '^':
-                val = B ^ A;
-                break;
+                break;               
+             
             }
-
             /* push the value obtained above onto the stack */
             push(val);
         }
