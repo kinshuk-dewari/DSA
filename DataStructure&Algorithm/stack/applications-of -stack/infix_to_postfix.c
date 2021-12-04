@@ -39,7 +39,7 @@ int main()
     printf("\n");
     while(exp[i]!='\0')
     {
-        if(isalnum(exp[i]))
+        if(isalnum(exp[i]))         //to check if the character is alphabet  or digit
             printf("%c ",exp[i]);
         else if(exp[i] == '(')
             push(exp[i]);
