@@ -2,18 +2,18 @@
 #include<ctype.h>
 char stack[100];
 int top = -1;
-void push(char x)
+void push(char x)           //push operators into the stack
 {
     stack[++top] = x;
 }
-char pop()
+char pop()                  // pop operators from  the stack
 {
     if(top == -1)
         return -1;
     else
         return stack[top--];
 }
-int priority(char x)
+int priority(char x)                // to check the priority of the operators
 {
     if(x == '(')
         return 0;
@@ -35,7 +35,7 @@ int main()
     printf("Enter the expression : ");
     scanf("%s",exp);
     printf("\n");
-    while(exp[i]!='\0')
+    while(exp[i]!='\0')                 // to reverse the expression using the push function
     {
         push(exp[i]);
         i++;
@@ -67,11 +67,11 @@ int main()
         }
         i++;
     }
-    while(top != -1)
+    while(top != -1)                    // to  pop the last remaining  operators from the stack
     {
         arr[j++]=pop();
     }
-    for(j=j-1;j>-1;j--)
+    for(j=j-1;j>-1;j--)              // to reverse the obtained expression to obtain the prefix expression
     {
         printf("%c",arr[j]);
     }
