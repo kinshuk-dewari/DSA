@@ -2,10 +2,12 @@
 #include<ctype.h>
 char stack[100];
 int top = -1;
+// push the operator char into the stack
 void push(char x)
 {
     stack[++top] = x;
 }
+// pop the operator from the stack
 char pop()
 {
     if(top == -1)
@@ -13,6 +15,7 @@ char pop()
     else
         return stack[top--];
 }
+//  chech   the priority of the operators
 int priority(char x)
 {
     if(x == '(')
@@ -53,7 +56,7 @@ int main()
         }
         i++;
     }
-    while(top != -1)
+    while(top != -1)            //pop  the  last remaining operators from the stack
     {
         printf("%c ",pop());
     }
