@@ -1,2 +1,2 @@
 # DSA 
-data structures and algorithms <br> using c
+# Data Structures and Algorithms
