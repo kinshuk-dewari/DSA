@@ -1,2 +1,2 @@
-# TREE
-# non liner data structures
+#  BINARY SEARCH TREE
+
