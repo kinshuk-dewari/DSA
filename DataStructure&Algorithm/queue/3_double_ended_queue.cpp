@@ -34,11 +34,13 @@ void insert_front()        // to insert from the front end
         front=0;
         rear=0;
     }
-    else if (front==0)
-    front=size-1; 
-    else
-    front=front-1;
-    
+    else 
+        { 
+           if (front==0)
+           front=size-1; 
+           else
+           front=front-1;
+        }
     printf("enter  the element :");
     scanf("%d",&data);
     queue[front]=data;
@@ -58,12 +60,15 @@ void insert_rear()          // to insert from the rear end
         rear=0;
         front=0;
     }
-    else if(rear==size-1)
-    rear=0;
-    else
-    rear=rear+1;
+    else 
+        { 
       
-
+             if(rear==size-1)
+             rear=0;
+             else
+             rear=rear+1;
+      
+        }
     printf("enter  the element :");
     scanf("%d",&data);
     queue[front]=data;
